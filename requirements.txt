@@ -1,0 +1,7 @@
+joblib==0.16.0
+xgboost==1.4.2
+requests==2.24.0
+nba_api==1.1.9
+pandas==1.0.5
+numpy==1.21.1
+scikit_learn==0.24.2
