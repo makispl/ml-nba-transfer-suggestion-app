@@ -110,7 +110,7 @@ We predicted that most of the latest (2020 season) plays of Jrue Holiday belong 
 }
 ```
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Jrue is a Buck.<a href="https://twitter.com/hashtag/FearTheDeer?src=hash&amp;ref_src=twsrc%5Etfw">#FearTheDeer</a> | <a href="https://twitter.com/Jrue_Holiday11?ref_src=twsrc%5Etfw">@Jrue_Holiday11</a> <a href="https://t.co/LSdsrnzHlM">pic.twitter.com/LSdsrnzHlM</a></p>&mdash; Milwaukee Bucks (@Bucks) <a href="https://twitter.com/Bucks/status/1331278772969091077?ref_src=twsrc%5Etfw">November 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Jrue is a Buck.<a href="https://twitter.com/hashtag/FearTheDeer?src=hash&amp;ref_src=twsrc%5Etfw">#FearTheDeer</a> | <a href="https://twitter.com/Jrue_Holiday11?ref_src=twsrc%5Etfw">@Jrue_Holiday11</a> <a href="https://t.co/LSdsrnzHlM">pic.twitter.com/LSdsrnzHlM</a></p>&mdash; Milwaukee Bucks (@Bucks) <a href="https://twitter.com/Bucks/status/1331278772969091077?ref_src=twsrc%5Etfw">November 24, 2020</a></blockquote> 
 
 
 
