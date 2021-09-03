@@ -56,7 +56,7 @@ The Data Corp I work for, accepted a new project: assist Milwaukee Bucks to make
 
 8. Configure `model_discpatcher.py` with the models you want to train.
 
-9. Run `train.py` to either:
+9. Run `train.py` either:
 
    a. to train the declared model in the selected fold
 
