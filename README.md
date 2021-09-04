@@ -1,7 +1,7 @@
 
 # Can a Data Scientist Replace a NBA Scout? ML App Development for Best Transfer Suggestions
 
-[NBA API ~ K-Means, Gaussian Mixture Models Clustering, Logistic Regression, Random Forest, XGBoost Classifiers | Originally published on this Medium post via the Towards Data Science publication]
+[NBA API ~ K-Means, Gaussian Mixture Models Clustering, Logistic Regression, Random Forest, XGBoost Classifiers | Originally published on this [Medium](https://towardsdatascience.com/can-a-data-scientist-replace-a-nba-scout-ml-app-development-for-best-transfer-suggestion-f07066c2773) post via the Towards Data Science publication]
 
 ![alt text](https://github.com/makispl/ml-nba-transfer-suggestion-app/blob/main/reports/figures/jc-gellidon-XmYSlYrupL8-unsplash.jpg?raw=true)
 
