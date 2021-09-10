@@ -19,11 +19,10 @@ def make_predictions():
     """
 
     # read the testing dataset
-    df = pd.read_csv(config.TESTING_FILE, converters={
-        'GAME_ID': lambda x: str(x)})
+    df = pd.read_csv(config.TESTING_FILE, converters={"GAME_ID": lambda x: str(x)})
 
     # define pca features
-    pca_feats = ["pca_"+f"{i}" for i in range(1, 10)]
+    pca_feats = ["pca_" + f"{i}" for i in range(1, 10)]
 
     # define original features
     feats = [
@@ -43,21 +42,19 @@ def make_predictions():
             "gm_cluster",
             "NET_SCORE",
             "kfold",
-            "GAME_DATE"
+            "GAME_DATE",
         )
     ]
 
     # define normalized features
-    norm_feats = [
-        feat+'_n' for feat in feats
-    ]
+    norm_feats = [feat + "_n" for feat in feats]
 
     # define the selected features
     # opt for the pca feats
     features = pca_feats
 
     # switch to the prediction data from 2020-01-01 to 2020-08-31
-    preds_df = df.loc[(df.GAME_DATE < '2020-11-01'), :].copy()
+    preds_df = df.loc[(df.GAME_DATE < "2020-11-01"), :].copy()
 
     X_test = preds_df.loc[:, pca_feats].values
 
@@ -68,11 +65,10 @@ def make_predictions():
     y_pred = clf.predict(X_test)
 
     # complete the testing dataset
-    preds_df.loc[:, 'pred_cluster'] = y_pred
+    preds_df.loc[:, "pred_cluster"] = y_pred
 
     # save the new csv with kfold column
-    preds_df.to_csv(
-        '../data/processed/test_proc_labeled.csv', index=False)
+    preds_df.to_csv("../data/processed/test_proc_labeled.csv", index=False)
 
     return preds_df
 
@@ -93,8 +89,12 @@ def select_player(preds_df):
     """
 
     # set candidates
-    candidates = [item for item in input(
-        "enter the candidate players' full names separated by comma, like:\nGerasimos Plegas, GitHub Reader : ").split(',')]
+    candidates = [
+        item
+        for item in input(
+            "enter the candidate players' full names separated by comma, like:\nGerasimos Plegas, GitHub Reader : "
+        ).split(",")
+    ]
 
     # define the dataset's players
     names = pd.Series(preds_df.PLAYER_NAME.unique()).tolist()
@@ -110,16 +110,17 @@ def select_player(preds_df):
 
     ranking = {}
 
-    # check for their mebmership in cluster_3 and the ratio
+    # check for their membership in cluster_3 and the ratio
     for candit in final_candidates:
         candit_df = preds_df.loc[preds_df.PLAYER_NAME == candit, :].copy()
-        vals = candit_df.loc[:, 'pred_cluster'].value_counts()
-        rank = vals.loc[2] / vals.sum()
+        vals = candit_df.loc[:, "pred_cluster"].value_counts(normalize=True)
+        rank = vals.loc[2]
         ranking[candit] = round(rank, 2)
 
     # sort the players by their ranking
-    ranking_sorted = {k: v for k, v in sorted(
-        ranking.items(), reverse=True, key=lambda item: item[1])}
+    ranking_sorted = {
+        k: v for k, v in sorted(ranking.items(), reverse=True, key=lambda item: item[1])
+    }
 
     print(ranking_sorted)
 
@@ -130,11 +131,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     # add the different arguments you need and their type
-    # currently, we only need fold
-    parser.add_argument(
-        "--rank",
-        type=bool
-    )
+    parser.add_argument("--rank", type=bool)
 
     # read the arguments from the command line
     args = parser.parse_args()
